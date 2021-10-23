@@ -1,0 +1,179 @@
+/* googlefonts for font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* default --> variables for "light mode" */
+:root{
+   --bg:#f5f6f7;
+   --text_color1:#858383;
+   --text_color2:#ff6a00;
+   --display_border:rgba(0,0,0, 0.05);
+   --shadow: -8px -4px 8px 0px #ffffff,
+              8px 4px 12px 0px #dfe4ea;
+   /* --shadow: -4px -2px 4px 0px #ffffff,
+              4px 2px 6px 0px #dfe4ea; */
+  
+   
+}
+ /* variables for "dark mode",  */
+.dark-theme{
+    --bg:#0e0e0e;
+    --text_color1:#d3cfcf;
+    --text_color2:#ff6a00;
+    --display_border:rgba(44, 43, 43, 0.993);
+     --shadow: -15px -15px 40px#050205,
+               15px 15px 40px  #1a191a;
+    
+    
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:var(--bg);
+    font-family: 'Poppins', sans-serif;
+}
+
+button{
+    outline: none;  
+}
+
+.calculator_container{
+    background: var(--bg);
+    height: 560px;
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+header{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    position: relative;
+}
+header span{
+    color: var(--text_color1);
+    font-size: 22px;
+}
+   
+
+header span:nth-child(1),
+header span:nth-child(3){
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* we creating fake box & using it's BORDER for calculator  underline  */
+header span:nth-child(2)::after{
+    width: 136px;
+    content:'';
+    position: absolute;
+    bottom: -5%;
+    border-bottom: 3px solid var(--text_color2);
+    right:30.5%;
+    z-index:100;
+    border-radius: 10px;
+}
+
+header span #icon_moon{
+    background: var(--bg);
+    color: var(--text_color1);
+    border: none;
+    cursor: pointer;
+}
+
+header span #icon_moon:active,
+header span #icon_moon:hover,#bars:hover{
+   color:var(--text_color2); 
+}
+
+/* display section - inputs & outputs */
+
+.display_container{
+    height: 30%;
+    position: relative;
+    background: var(--bg);
+    border-bottom: 3px solid var(--display_border);
+    border-top: 3px solid var(--display_border);
+}
+
+#history,#output{
+    color: var(--text_color1);
+    text-align: right;
+    font-size: 30px;
+    font-weight: 400;
+    padding-right: 20px;
+}
+#history{
+    position: absolute;
+    bottom: 35%;
+    right: 4%;
+}
+#output{
+    position: absolute;
+    bottom: 5%;
+    right: 4%;
+}
+/* keyboard section */
+
+.keyboard{
+    padding: 18px;
+   
+}
+
+.operator,.number{
+    width:50px;
+    height: 50px;
+    background-color: var(--bg);
+    border:2px solid var(--display_border);
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    font-size: 21.5px;
+    font-weight: 600;    
+    cursor: pointer;
+}
+
+.first_row,.second_row,
+.third_row,.fourth_row,
+.fifth_row{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    border-bottom: 8px solid var(--bg) ;   
+}
+.number{
+    color: var(--text_color1);
+}
+.operator{
+    color: var(--text_color2);
+}
+
+.number:hover, .number:active,
+.operator:hover,.operator:active{
+    border: 2px solid var(--text_color2);
+}
+
+/* styling equal */
+.fifth_row .operator{
+    color: var(--text_color2);
+    background-color:var(--bg);
+    box-shadow: var(--shadow);
+    width: 130px ;
+    border-radius: 20px;
+}
+
+.fifth_row .operator:active,
+.fifth_row .operator:hover{
+    color: white;
+    background-color:var(--text_color2);
+}
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- light_dark works in whole html page -->
+<html lang="en">  
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - light/dark mode </title>
+    <!-- fontawesome for icons  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+     <!-- rel = shortcut icon  is used for web tab icon -->
+    <link rel="shortcut icon" href="/calculator/calculator icon.png">
+    <!-- css styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="calculator_container">
+
+        <!-- header section -->
+        <header>
+            <span><i class="fas fa-bars" id="bars"></i></span>
+            <span>Calculator</span>
+            <span>
+                <button id='icon_moon' >
+                    <i class="fas fa-moon" id="moon"></i>
+                </button> 
+        </header>
+
+        <!-- display section -->
+        <section class="display_container">
+            <!-- <input type="text" placeholder="0" id="output-screen"> -->
+            <div id="history">
+                <p id="history_value"></p>
+            </div>
+            <div id="output">
+                <p id="output_value"></p>
+            </div>
+        </section>
+
+        <!-- keyboard section -->
+        <section class="keyboard">
+
+            <div class="first_row">
+                <button class="operator" id="AC" >AC</button></span>
+                <button class="operator" id="backspace"><i class="fas fa-backspace"></i></button></span>
+                <button class="operator" id="%">%</button></span>
+                <button class="operator" id="/">/</button></span>
+            </div>
+            <div class="second_row">
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button class="operator" id="*">*</button>
+            </div>
+            <div class="third_row">
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button class="operator" id="-">-</button>
+            </div>
+            <div class="fourth_row">
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button class="operator" id="+">+</button>
+            </div>
+            <div class="fifth_row">
+                <button class="number" id="00">00</button>
+                <button class="number" id="0">0</button> 
+                <span><button class="operator" id="=">=</button></span>
+            </div>
+            
+     
+        </section>
+    </main>
+    
+   <script src="main.js">
+    //    let output = document.getElementsByid('output-screen');
+    //   function display(input){
+    //    output.value += input;
+    //   }
+   </script>
+</body>
+
+</html>
